@@ -15,15 +15,52 @@ var CodeLength = prompt(" Please,Select the desired length of the  password betw
 
 if (CodeLength < 8 || CodeLength > 128 || isNaN(CodeLength) ) {
 
-  alert ("Your Password is invalid length. Please select your password as valid length( Between 8 and 128 characters)");
+  alert("Your Password is invalid length. Please select your password as valid length( Between 8 and 128 characters)");
   var CodeLength = prompt(" Please,Select the desired length of the  password between the 8 and 128 characters! ,");
 
 }
 
+var AddLowerCase = confirm("Would you like Your Password as a (LowerCase) letter!");
+var AddUpperCase = confirm("Would you like Your Password as a (UpperCase) letter!");
+var AddNumeric = confirm("Would you like Your Password as a (Numeric) Number!");
+var AddSymbol = confirm("Would you like Your Password as a (Special Symbol)!  Like,@,$,%, etc.");
+ 
 
+var AddLowerCase ="abcdefghijklmnopqrstuvwxyz";
+var AddUpperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var AddNumeric ="0123456789";
+var AddSymbol ="!@#$%^&*(){}:<>[]?" 
+var characters =[];
 
-
+if (AddLowerCase){
+  characters += AddLowerCase ;
 }
+
+if (AddUpperCase){
+  characters += AddUpperCase ;
+}
+
+if (AddNumeric){
+  characters += AddNumeric ;
+}
+
+if (AddSymbol){
+  characters += AddSymbol ;
+}
+
+var password ="";
+
+for ( let i = 0; i < CodeLength; i++) {
+
+  let RandomPassCode = Math.floor((Math.random() * characters.length));
+  password += characters[RandomPassCode];
+}
+
+return password;
+}
+
+
+
 
 // Write password to the #password input
 function writePassword() {
