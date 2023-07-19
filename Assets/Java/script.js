@@ -26,38 +26,48 @@ var AddNumeric = confirm("Would you like Your Password as a (Numeric) Number!");
 var AddSymbol = confirm("Would you like Your Password as a (Special Symbol)!  Like,@,$,%, etc.");
  
 
-var AddLowerCase ="abcdefghijklmnopqrstuvwxyz";
-var AddUpperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-var AddNumeric ="0123456789";
-var AddSymbol ="!@#$%^&*(){}:<>[]?" 
-var characters =[];
+var IncludeLowerCase ="abcdefghijklmnopqrstuvwxyz";
+var IncludeUpperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+var IncludeNumeric ="0123456789";
+var IncludeSymbol ="!@#$%^&*(){}:<>[]?" 
 
-if (AddLowerCase){
-  characters += AddLowerCase ;
+var characters = "";
+
+if (IncludeLowerCase == false && !IncludeUpperCase == false && !IncludeSymbol == false && !IncludeNumeric == false) {
+  alert( " Please,You need to select at least one type of characters! ")
+  return "";
 }
+ 
 
 if (AddUpperCase){
-  characters += AddUpperCase ;
+  characters += IncludeUpperCase ;
 }
 
+if (AddLowerCase){
+  characters += IncludeLowerCase ;
+}
+
+
+
 if (AddNumeric){
-  characters += AddNumeric ;
+  characters += IncludeNumeric ;
 }
 
 if (AddSymbol){
-  characters += AddSymbol ;
+  characters += IncludeSymbol ;
 }
 
 var password ="";
 
 for ( let i = 0; i < CodeLength; i++) {
 
-  let RandomPassCode = Math.floor((Math.random() * characters.length));
+  let RandomPassCode = Math.floor(Math.random() * characters.length);
   password += characters[RandomPassCode];
 }
 
 return password;
 }
+
 
 
 
