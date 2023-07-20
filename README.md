@@ -33,7 +33,7 @@ start by opening the index.html file in a web browser using the vs code editor. 
 * A Prompt will appear and you can enter the desired  length of the password. In this project , enter a number between 8 to 128 and click "ok" to be continue. 
 * Next , the confirmation prompts will appear , select character types you want to include into your password. the user is allowed to say “Ok” Or "Cancel"  To any given character type. However, at least one character type should be selected. 
   * Now, generated password will be displayed in the input field  of Generate a password webpage.
-  * Here is the demo of  the project: ![AP Password Generator Shield](Assets/Images/Demo.gifImages)
+  * Here is the demo of  the project: ![AP Password Generator Shield](Assets/Images/Demo.gif)
 
 
 
