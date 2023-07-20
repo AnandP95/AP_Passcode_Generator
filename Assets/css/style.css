@@ -1,9 +1,13 @@
+
+/* set a pseudo elements and box sizing property  */
+
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
+/*This style apply to html,body and  wrapper elements*/
 html,
 body,
 .wrapper {
@@ -12,17 +16,21 @@ body,
   padding: 0;
 }
 
+/*set the font fmaily to serif.*/
 body {
   font-family: sans-serif;
   background-color: #f9fbfd;
 }
 
+/* THis content used for main content and seta padding. */
 .wrapper {
   padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
 }
 
+
+/*set the header text-align ,padding , text color.*/
 header {
   text-align: center;
   padding: 20px;
@@ -30,6 +38,7 @@ header {
   color: hsl(206, 17%, 28%);
 }
 
+/* set a card color,radius,border-width. */
 .card {
   background-color: hsl(0, 0%, 100%);
   border-radius: 5px;
@@ -41,7 +50,7 @@ header {
   max-width: 800px;
   padding: 30px 40px;
 }
-
+ /*set a horizontal line after the card header */
 .card-header::after {
   content: " ";
   display: block;
@@ -50,9 +59,11 @@ header {
   height: 2px;
 }
 
+/*set a card body height and footer.*/
 .card-body {
   min-height: 100px;
 }
+
 
 .card-footer {
   text-align: center;
@@ -72,6 +83,8 @@ header {
   clear: both;
 }
 
+
+/*set a styles for the button  */
 .btn {
   border: none;
   background-color: hsl(360, 91%, 36%);
@@ -97,6 +110,7 @@ button[disabled] {
   float: right;
 }
 
+/* set a styles  for the password  elements. */
 #password {
   -webkit-appearance: none;
   -moz-appearance: none;
